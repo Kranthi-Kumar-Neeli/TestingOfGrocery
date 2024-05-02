@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Selected items</h1>
+    <ul id="list">
+        <li></li>
+    </ul>
+    <button id="send-to-whatsapp">Send to WhatsApp</button>
+    <script>
+        // Retrieve the array from localStorage
+        let textArray = JSON.parse( localStorage.getItem( 'selectedTexts' ) ) || [];
+
+        // Create list items for each piece of text
+        const list = document.getElementById( 'list' );
+        textArray.forEach( ( text ) =>
+        {
+            var li = document.createElement( "li" );
+            li.textContent = text;
+            list.appendChild( li );
+        } );
+        // Add event listener to the send-to-whatsapp button
+        document.getElementById( 'send-to-whatsapp' ).addEventListener( 'click', sendToWhatsApp );
+
+        function sendToWhatsApp ()
+        {
+            // Replace with the recipient WhatsApp number (including the country code)
+            const recipientNumber = '+917995388424';
+
+            // Create the message body
+            let messageBody = 'Here are the selected items:\n\n';
+            const listItems = document.querySelectorAll( '#list li' );
+            listItems.forEach( ( item, index ) =>
+            {
+                messageBody += `${ index + 1 }. ${ item.textContent }\n`;
+            } );
+
+            // Open WhatsApp Web with the message
+            const whatsappUrl = `https://wa.me/${ recipientNumber }?text=${ encodeURIComponent( messageBody ) }`;
+            window.open( whatsappUrl, '_blank' );
+        }
+
+    </script>
+</body>
+
+</html>

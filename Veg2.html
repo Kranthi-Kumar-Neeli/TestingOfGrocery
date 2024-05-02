@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .Veg2-header {
+            height: 80px;
+            width: 98%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: blueviolet;
+            border: 3px solid black;
+            padding: 5px;
+        }
+
+        .Veg2-headtext {
+            text-decoration: none;
+            color: black;
+        }
+
+        #text-color {
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            /* margin-bottom: 20px; */
+            width: 100%;
+            max-width: 100%;
+
+        }
+
+        .block {
+            width: 100%;
+            height: 100px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            /* margin: 10px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .img-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-block {
+            text-align: center;
+        }
+
+        .button-block {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+
+        .veg-main-body {
+            height: 75vh;
+            width: 100%;
+            /* border: 3px solid black; */
+            overflow-y: scroll;
+        }
+
+        .veg-footer {
+            height: 20vw;
+            width: 100%;
+            border: 3px solid burlywood;
+        }
+
+        #next-page-btn {
+            height: 100%;
+            width: 100%;
+            color: white;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="Veg2-header">
+        <div class="Veg2-head-items"><a href="index.html" class="Veg2-headtext">Home </a></div>
+        <div class="Veg2-head-items"><a href="Veg2.html" class="Veg2-headtext" id="text-color">Veg</a></div>
+        <div class="Veg2-head-items"><a href="Grocery.html" class="Veg2-headtext">Grocery</a></div>
+        <div class="Veg2-head-items"><a href="#" class="Veg2-headtext">Contact</a></div>
+        <div class="Veg2-head-items"><a href="#" class="Veg2-headtext">About</a></div>
+    </div>
+
+    <div class="veg-main-body">
+        <!-- Container 1 -->
+        <div class="container cont1">
+            <div class="block img-block">
+                <img src="images/Tomato.jpg" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>Tomato<br>(1Kg)- 69Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 2 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/Carrot.jpg" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>Carrot<br>(1Kg)- 70Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 3 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/Cabbage.jpg" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>Cabbage<br>(1Kg)- 76Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 4 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/Potato.jpg" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>Potato<br>(1Kg)- 80Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 3 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/Cabbage.jpg" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>Cabbage<br>(1Kg)- 76Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 4 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/Potato.jpg" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>Potato<br>(1Kg)- 80Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 3 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/Brinjal.webp" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>Brinjal<br>(1Kg)- 90Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 3 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/Onions.jpeg" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>Onlions<br>(1Kg)- 60Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 3 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/Chillies.webp" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>Clilli<br>(1Kg)- 70Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 3 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/BottleGourd.jpg" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>BottleGourd<br>(1Kg)- 59Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 3 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/BitterGround.webp" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>BitterGourd<br>(1Kg)- 65Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 3 -->
+        <div class="container">
+            <div class="block img-block">
+                <img src="images/Tindora.jpg" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>Tindora<br>(1Kg)- 65Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 3 -->
+        <div class="container last-container">
+            <div class="block img-block">
+                <img src="images/Chikkudu.webp" alt="Image 1">
+            </div>
+            <div class="block text-block">
+                <p>BroadBeans<br>(1Kg)- 65Rs</p>
+            </div>
+            <div class="block button-block">
+                <button class="btn">Add</button>
+            </div>
+        </div>
+        <!-- Container 2 to 5 -->
+        <!-- Repeat the above container structure for each container with unique text and image sources -->
+
+        <!-- Button to open next page -->
+
+    </div>
+    <footer class="veg-footer"><button id="next-page-btn">Go To Cart</button></footer>
+    <script>
+        let textArray = [];
+
+        // Add event listener to each button
+        document.querySelectorAll( '.btn' ).forEach( ( btn, index ) =>
+        {
+            btn.addEventListener( 'click', () =>
+            {
+                let text = btn.parentNode.parentNode.querySelector( '.text-block' ).textContent;
+                textArray.push( text );
+            } );
+        } );
+
+        // Add event listener to next page button
+        document.getElementById( 'next-page-btn' ).addEventListener( 'click', () =>
+        {
+            // Store the array in localStorage
+            localStorage.setItem( 'selectedTexts', JSON.stringify( textArray ) );
+            // Redirect to the next page
+            window.location.href = 'next-page.html';
+        } );
+    </script>
+
+</body>
+
+</html>
