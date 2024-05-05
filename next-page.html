@@ -36,9 +36,13 @@
 
         // Create list items for each piece of text
         const list = document.getElementById( 'list' );
+        // Clear the list before adding new items
+        list.innerHTML = '';
         textArray.forEach( ( text ) =>
         {
             var li = document.createElement( "li" );
+            // Trim any leading or trailing whitespace
+            li.textContent = text.trim();
             li.textContent = text;
             list.appendChild( li );
         } );
@@ -51,16 +55,21 @@
             const recipientNumber = '+917995388424';
 
             // Create the message body
-            let messageBody = 'Here are the selected items:\n\n';
+            let messageBody = 'Here are the selected items:\n';
             const listItems = document.querySelectorAll( '#list li' );
             listItems.forEach( ( item, index ) =>
             {
-                messageBody += `${ index + 1 }. ${ item.textContent }\n`;
+                messageBody += `${ index + 1 }.${ item.textContent.trim() }\n`;
             } );
 
             // Open WhatsApp Web with the message
             const whatsappUrl = `https://wa.me/${ recipientNumber }?text=${ encodeURIComponent( messageBody ) }`;
             window.open( whatsappUrl, '_blank' );
+            // Delete localStorage when the user closes the website
+            window.onbeforeunload = function ()
+            {
+                localStorage.removeItem( 'selectedTexts' );
+            };
         }
 
     </script>
