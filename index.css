@@ -91,6 +91,9 @@ body {
     text-overflow: ellipsis;
     position: relative;
     margin-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #para0 {
@@ -98,8 +101,11 @@ body {
 }
 
 .body2 {
-    height: inherit;
+    height: 70vh;
     width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     /* background-color: aqua; */
 }
 
